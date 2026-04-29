@@ -130,7 +130,7 @@ function App() {
         <div className="heroImageCol">
           <img
             src="/hero-main.png"
-            alt="Okay Kay hoodie — urban skyline and graffiti golden hour"
+            alt="Okay Kay Charm Bag Collection — bags and gold charms, coming soon"
             className="heroImage"
           />
         </div>

@@ -27,13 +27,12 @@ function App() {
       title: 'Statement Fits',
       copy: 'Bold looks. Loud confidence.',
       image:
-        'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80',
+        '/statement-fits.png',
     },
     {
       title: 'Everyday Heat',
       copy: 'Effortless style. Always on.',
-      image:
-        'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80',
+      image: '/everyday-heat.png',
     },
   ]
 
@@ -204,4 +203,5 @@ function App() {
 }
 
 export default App
+
 

@@ -1,218 +1,67 @@
-/* OKAY KAY — Charm Bag Collection hero (dark luxury) */
+/* Single full-bleed campaign image — no duplicate text UI */
 
 .root {
   position: relative;
-  min-height: 100vh;
   width: 100%;
   max-width: 100vw;
   background: #0b0b0b;
   overflow-x: hidden;
-  isolation: isolate;
 }
 
-/* Horizontal scrim: readability on left, image visible on right */
-.scrim {
+.srOnly {
   position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgba(11, 11, 11, 0.96) 0%,
-    rgba(11, 11, 11, 0.86) 35%,
-    rgba(11, 11, 11, 0.35) 70%,
-    rgba(11, 11, 11, 0.1) 100%
-  );
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* Bottom edge fade into next section */
+.imageWrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  max-height: min(100vh, 100dvh);
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+}
+
+/* Subtle base blend into the next section (does not cover the main artwork) */
 .bottomFade {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: min(28vh, 220px);
-  z-index: 0;
+  height: 72px;
+  z-index: 2;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 1) 100%);
+  background: linear-gradient(180deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 0.85) 100%);
 }
 
-.inner {
-  position: relative;
-  z-index: 1;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 48px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: clamp(16px, 2.5vw, 40px);
-  row-gap: 40px;
-  align-items: center;
-  width: 100%;
-}
-
-.left {
-  grid-column: 1 / span 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: clamp(1rem, 2.5vw, 1.75rem);
-  min-width: 0;
-}
-
-.leftStack {
-  width: 100%;
-}
-
-.brand {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, system-ui, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: #c9a86a;
-  margin: 0 0 4px 0;
-}
-
-.headline {
-  display: flex;
-  flex-direction: column;
-  gap: 0.02em;
-  line-height: 0.95;
-  margin: 0;
-  font-family: 'Playfair Display', Didot, 'Bodoni MT', 'Times New Roman', serif;
-  font-weight: 600;
-  font-size: clamp(2.1rem, 4.2vw, 3.75rem);
-}
-
-.headlineLineWhite,
-.headlineLineGold {
-  display: block;
-}
-
-.headlineLineWhite {
-  color: #ededed;
-}
-
-.headlineLineGold {
-  color: #c9a86a;
-}
-
-.sub {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, system-ui, sans-serif;
-  font-size: clamp(1rem, 1.35vw, 1.125rem);
-  font-weight: 400;
-  line-height: 1.5;
-  color: #ededed;
-  margin: 0.25rem 0 0 0;
-  max-width: 32ch;
-}
-
-.support {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, system-ui, sans-serif;
-  font-size: clamp(0.875rem, 1.1vw, 0.9375rem);
-  line-height: 1.6;
-  color: #b8b8b8;
-  margin: 0;
-  max-width: 32ch;
-}
-
-.status {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: #c9a86a;
-  margin: clamp(0.75rem, 2vw, 1.5rem) 0 0 0;
-}
-
-.right {
-  grid-column: 6 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: min(70vh, 700px);
-  min-width: 0;
-}
-
-.heroImage {
-  display: block;
-  max-height: min(78vh, 800px);
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  object-position: right center;
-  margin: 0;
-}
-
-/* --- Mobile --- */
 @media (max-width: 900px) {
-  .inner {
-    padding: 32px 24px 48px;
-    min-height: auto;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    min-height: unset;
-  }
-
-  .left {
-    grid-column: 1 / -1;
-    text-align: center;
-    align-items: center;
-    order: 1;
-  }
-
-  .brand,
-  .sub,
-  .support,
-  .status {
-    max-width: 100%;
-  }
-
-  .sub,
-  .support {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .headline {
-    font-size: clamp(1.85rem, 8.5vw, 2.75rem);
-  }
-
-  .leftStack {
-    align-items: center;
-  }
-
-  .right {
-    grid-column: 1 / -1;
-    order: 2;
-    justify-content: center;
-    min-height: auto;
+  .imageWrap {
+    min-height: min(100vh, 100dvh);
+    padding: 0 12px;
   }
 
   .heroImage {
     max-height: none;
-    object-position: center;
-  }
-
-  /* Slightly stronger left read on small screens (stacked) */
-  .scrim {
-    background: linear-gradient(
-      180deg,
-      rgba(11, 11, 11, 0.92) 0%,
-      rgba(11, 11, 11, 0.55) 45%,
-      rgba(11, 11, 11, 0.15) 100%
-    );
   }
 }

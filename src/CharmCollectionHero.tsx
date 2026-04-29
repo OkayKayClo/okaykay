@@ -1,47 +1,28 @@
-import { Box, Stack, Text, Title } from '@mantine/core'
 import classes from './CharmCollectionHero.module.css'
 
+/**
+ * Full-bleed campaign hero — artwork at /hero-charm-collection.png
+ * already includes all headline and product visuals; no duplicate live text.
+ */
 export function CharmCollectionHero() {
   return (
     <section className={classes.root} aria-label="Charm Bag Collection">
-      <div className={classes.scrim} />
-      <div className={classes.bottomFade} />
+      <h1 className={classes.srOnly}>
+        OKAY KAY. Charm Bag Collection. Personalize. Express. Own it. Coming soon.
+      </h1>
 
-      <div className={classes.inner}>
-        <div className={classes.grid}>
-          <div className={classes.left}>
-            <Stack gap="sm" align="flex-start" className={classes.leftStack}>
-              <Text component="p" className={classes.brand} role="text">
-                OKAY KAY
-              </Text>
-
-              <Title order={1} className={classes.headline}>
-                <span className={classes.headlineLineWhite}>CHARM BAG</span>
-                <span className={classes.headlineLineGold}>COLLECTION</span>
-              </Title>
-
-              <Text className={classes.sub}>Personalize. Express. Own it.</Text>
-
-              <Text component="p" className={classes.support}>
-                A new way to style.
-                <br />
-                A million ways to make it yours.
-              </Text>
-
-              <Text className={classes.status}>COMING SOON</Text>
-            </Stack>
-          </div>
-
-          <Box className={classes.right}>
-            <img
-              src="/hero-charm-collection.png"
-              alt="Okay Kay Charm Bag Collection — campaign artwork with handbags and charms"
-              className={classes.heroImage}
-              decoding="async"
-            />
-          </Box>
-        </div>
+      <div className={classes.imageWrap}>
+        <img
+          src="/hero-charm-collection.png"
+          alt="Okay Kay Charm Bag Collection — handbags, gold charms, and collection details"
+          className={classes.heroImage}
+          decoding="async"
+          fetchPriority="high"
+        />
       </div>
+
+      {/* Eases the transition into the rest of the page without covering the art */}
+      <div className={classes.bottomFade} aria-hidden="true" />
     </section>
   )
 }

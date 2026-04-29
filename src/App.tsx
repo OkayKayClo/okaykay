@@ -91,8 +91,8 @@ function App() {
 
           <Box className="heroImageWrap">
             <img
-              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80"
-              alt="Urban model with city mural"
+              src="/hero-main.png"
+              alt="Okay Kay hoodie — urban skyline and graffiti golden hour"
               className="heroImage"
             />
           </Box>

@@ -1,0 +1,49 @@
+.root {
+  background: #f6f4f0;
+  padding: clamp(2.6rem, 7vw, 6rem) 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.heading {
+  font-family: 'Playfair Display', Didot, 'Bodoni MT', serif;
+  color: #0b0b0b;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.subheading {
+  color: #8a8a8a;
+  margin-top: 0.4rem;
+}
+
+.row {
+  justify-content: center;
+}
+
+.input {
+  flex: 1;
+  min-width: min(420px, 92vw);
+}
+
+.button {
+  background: #0b0b0b;
+  color: #ededed;
+  min-width: 160px;
+}
+
+.button:hover {
+  background: #c9a86a;
+  color: #0b0b0b;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .button {
+    width: min(420px, 92vw);
+  }
+}

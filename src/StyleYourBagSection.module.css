@@ -1,0 +1,49 @@
+.root {
+  background: #0b0b0b;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  color: #ededed;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+.heading {
+  font-family: 'Playfair Display', Didot, 'Bodoni MT', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.subheading {
+  color: #b8b8b8;
+  margin-top: 0.4rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+}
+
+.cardTitle {
+  color: #fff;
+  font-weight: 600;
+}
+
+.cardCopy {
+  color: #c9a86a;
+  font-size: 0.9rem;
+}

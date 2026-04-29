@@ -1,0 +1,55 @@
+.root {
+  background: #f6f4f0;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+.heading {
+  font-family: 'Playfair Display', Didot, 'Bodoni MT', serif;
+  color: #0b0b0b;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.subheading {
+  color: #8a8a8a;
+  margin-top: 0.4rem;
+}
+
+.card {
+  background: #fffdf9;
+  border: 1px solid #e5ded2;
+  padding: 0.75rem;
+  transition: transform 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.desc {
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
+
+.badge {
+  margin-top: 0.5rem;
+  color: #c9a86a;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+}

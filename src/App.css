@@ -20,10 +20,7 @@
   align-items: center;
 }
 
-.bannerTitle,
-.lookTitle,
-.emailTitle,
-.footerLogo {
+.bannerTitle {
   font-family: Didot, Bodoni MT, 'Times New Roman', serif;
 }
 
@@ -53,13 +50,6 @@
   padding-bottom: 0;
 }
 
-.joinButton {
-  height: 44px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 12px;
-}
-
 .colorBanner {
   margin: 40px calc(50% - 50vw) 0;
   padding: clamp(2rem, 5vw, 3.2rem) 1rem;
@@ -80,77 +70,6 @@
   letter-spacing: 0.2em;
 }
 
-.collections {
-  padding: 26px 0 0;
-}
-
-.sectionIntro {
-  border-top: 1px solid #d9d4cb;
-  padding-top: 12px;
-  margin-bottom: 14px;
-}
-
-.lookCard {
-  min-height: 370px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  transition: transform 200ms ease;
-}
-
-.lookCard:hover {
-  transform: scale(1.01);
-}
-
-.lookOverlay {
-  width: 100%;
-  color: #fff;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.1));
-}
-
-.lookTitle {
-  font-size: 2rem;
-  margin-bottom: 4px;
-}
-
-.emailCapture {
-  text-align: center;
-  padding: 62px 0;
-}
-
-.emailTitle {
-  font-size: clamp(2rem, 4vw, 3.3rem);
-}
-
-.emailRow {
-  width: min(620px, 100%);
-}
-
-.emailInput {
-  flex: 1;
-}
-
-.joinButton {
-  background: #ff6b1a;
-}
-
-.joinButton:hover {
-  background: #7b36ff;
-}
-
-.footer {
-  margin-top: 8px;
-  background: #090909;
-  color: #fff;
-  padding: 44px 1rem 30px;
-  text-align: center;
-}
-
-.footerLogo {
-  font-size: 2.5rem;
-}
-
 @media (max-width: 900px) {
   .headerGrid {
     grid-template-columns: 1fr;
@@ -166,19 +85,7 @@
     justify-content: center;
   }
 
-  .lookCard {
-    min-height: 300px;
-  }
-
-  .emailCapture {
-    padding: 44px 0;
-  }
-
-  .emailRow {
-    flex-direction: column;
-  }
-
-  .emailRow .mantine-Button-root {
-    width: 100%;
+  .colorBanner {
+    margin-top: 24px;
   }
 }

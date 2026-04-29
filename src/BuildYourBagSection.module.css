@@ -1,0 +1,56 @@
+.root {
+  background: #0b0b0b;
+  color: #ededed;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+.topGrid {
+  align-items: center;
+}
+
+.heading {
+  font-family: 'Playfair Display', Didot, 'Bodoni MT', serif;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.subtext {
+  margin-top: 0.8rem;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+}
+
+.micro {
+  margin-top: 0.8rem;
+  color: #b8b8b8;
+}
+
+.imageWrap {
+  border: 1px solid rgba(201, 168, 106, 0.25);
+}
+
+.image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.stepCard {
+  border: 1px solid #c9a86a;
+  padding: 1rem;
+  min-height: 110px;
+  background: #111;
+}
+
+.stepId {
+  color: #c9a86a;
+  letter-spacing: 0.08em;
+}
+
+.stepTitle {
+  margin-top: 0.35rem;
+  font-weight: 500;
+}

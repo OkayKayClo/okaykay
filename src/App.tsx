@@ -71,47 +71,73 @@ function App() {
             <Anchor href="#join" className="navLink">
               Join
             </Anchor>
-            <ActionIcon variant="transparent" color="dark" aria-label="shopping bag">
-              <IconShoppingBag size={18} stroke={1.7} />
-            </ActionIcon>
+            <Group gap={2} wrap="nowrap" align="center">
+              <ActionIcon variant="transparent" color="dark" aria-label="Shopping bag, 0 items">
+                <IconShoppingBag size={18} stroke={1.7} />
+              </ActionIcon>
+              <Text size="xs" c="dimmed" ff="monospace">
+                0
+              </Text>
+            </Group>
           </Group>
         </Container>
       </header>
 
-      <Container size="lg" className="mainContent">
-        <section className="heroSplit">
-          <Stack gap={20} className="heroText">
+      <section className="heroFull" aria-label="Hero">
+        <div className="heroColLeft">
+          <Stack gap={20}>
             <Title order={1} className="heroTitle">
-              Made for the ones who move different.
+              Made for the ones who move different
+              <span className="heroTitleDot" aria-hidden="true">
+                .
+              </span>
             </Title>
             <Text className="heroSub">
               Clean silhouettes. Bold presence. Built for everyday statements.
             </Text>
           </Stack>
 
-          <Box className="heroImageWrap">
-            <img
-              src="/hero-main.png"
-              alt="Okay Kay hoodie — urban skyline and graffiti golden hour"
-              className="heroImage"
-            />
-          </Box>
-
-          <Stack gap={16} className="heroActions">
-            <Group gap={12}>
+          <Stack gap={16} mt="md">
+            <Group gap={12} wrap="wrap">
               <Button size="md" radius={0} className="btnPrimary">
-                Join the Drop
+                Join the Drop &rarr;
               </Button>
               <Button size="md" radius={0} variant="outline" className="btnSecondary">
                 Explore Looks
               </Button>
             </Group>
-            <Text size="sm" c="dimmed">
-              Join 3,000+ early supporters from around the world.
-            </Text>
+            <Group gap={10} className="heroSocialProof" wrap="wrap">
+              <div className="heroAvatars" aria-hidden="true">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=96&h=96&q=60"
+                  alt=""
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=60"
+                  alt=""
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=96&h=96&q=60"
+                  alt=""
+                />
+              </div>
+              <Text size="sm" c="dimmed" className="heroSocialText">
+                Join 3,000+ early supporters from around the world.
+              </Text>
+            </Group>
           </Stack>
-        </section>
+        </div>
 
+        <div className="heroImageCol">
+          <img
+            src="/hero-main.png"
+            alt="Okay Kay hoodie — urban skyline and graffiti golden hour"
+            className="heroImage"
+          />
+        </div>
+      </section>
+
+      <Container size="lg" className="mainContent">
         <section className="colorBanner">
           <Text className="bannerTitle">For every shade. Every city. Every story.</Text>
           <Text className="bannerSub">One culture. One vision.</Text>

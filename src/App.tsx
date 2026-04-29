@@ -63,9 +63,9 @@ function App() {
             </Anchor>
           </Group>
 
-          <Text className="logo" ta="center">
-            OKAY KAY
-          </Text>
+          <Anchor href="#" className="logoWrap">
+            <img src="/okay-kay-logo.png" alt="OKAY KAY logo" className="logoImage" />
+          </Anchor>
 
           <Group gap={16} justify="flex-end" className="rightNav">
             <Anchor href="#join" className="navLink">

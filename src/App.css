@@ -19,7 +19,6 @@
   align-items: center;
 }
 
-.logo,
 .heroTitle,
 .bannerTitle,
 .lookTitle,
@@ -28,10 +27,19 @@
   font-family: Didot, Bodoni MT, 'Times New Roman', serif;
 }
 
-.logo {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  letter-spacing: 0.06em;
-  line-height: 1;
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  display: block;
+  height: clamp(36px, 5.5vw, 52px);
+  width: auto;
+  max-width: min(320px, 78vw);
+  object-fit: contain;
 }
 
 .navLink {
@@ -194,6 +202,10 @@
   .headerGrid {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .logoWrap {
+    order: -1;
   }
 
   .leftNav,

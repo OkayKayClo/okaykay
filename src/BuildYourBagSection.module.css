@@ -39,18 +39,60 @@
 }
 
 .stepCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   border: 1px solid #c9a86a;
-  padding: 1rem;
-  min-height: 110px;
-  background: #111;
+  border-radius: 12px;
+  padding: 22px;
+  min-height: 120px;
+  background: #0b0b0b;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.stepId {
+.stepCard:hover {
+  transform: translateY(-4px);
+  border-color: #ddbc7e;
+  box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.25);
+}
+
+.stepNumber {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c9a86a;
+  color: #0b0b0b;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex: 0 0 auto;
+}
+
+.stepIcon {
   color: #c9a86a;
-  letter-spacing: 0.08em;
+  flex: 0 0 auto;
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
 }
 
 .stepTitle {
-  margin-top: 0.35rem;
-  font-weight: 500;
+  font-family: 'Playfair Display', Didot, 'Bodoni MT', serif;
+  color: #ededed;
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  line-height: 1.1;
+}
+
+.stepSubtitle {
+  color: #8a8a8a;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  margin-top: 0.15rem;
 }

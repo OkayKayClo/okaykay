@@ -1,10 +1,11 @@
 import { Box, Container, SimpleGrid, Text, Title } from '@mantine/core'
+import { IconLink, IconShoppingBag, IconSparkles } from '@tabler/icons-react'
 import classes from './BuildYourBagSection.module.css'
 
 const steps = [
-  { id: '01', title: 'Choose Your Bag' },
-  { id: '02', title: 'Add Your Charms' },
-  { id: '03', title: 'Make It Yours' },
+  { id: '1', title: 'Choose', subtitle: 'Your Bag', Icon: IconShoppingBag },
+  { id: '2', title: 'Add', subtitle: 'Your Charms', Icon: IconLink },
+  { id: '3', title: 'Make It', subtitle: 'Yours', Icon: IconSparkles },
 ]
 
 export function BuildYourBagSection() {
@@ -32,11 +33,15 @@ export function BuildYourBagSection() {
           </Box>
         </SimpleGrid>
 
-        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="md" mt="xl">
+        <SimpleGrid cols={{ base: 1, sm: 3 }} spacing="xl" mt={56}>
           {steps.map((step) => (
             <Box key={step.id} className={classes.stepCard}>
-              <Text className={classes.stepId}>{step.id}</Text>
-              <Text className={classes.stepTitle}>{step.title}</Text>
+              <span className={classes.stepNumber}>{step.id}</span>
+              <step.Icon size={30} stroke={1.8} className={classes.stepIcon} />
+              <div className={classes.stepText}>
+                <Text className={classes.stepTitle}>{step.title}</Text>
+                <Text className={classes.stepSubtitle}>{step.subtitle}</Text>
+              </div>
             </Box>
           ))}
         </SimpleGrid>

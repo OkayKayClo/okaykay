@@ -14,6 +14,7 @@ import {
 } from '@mantine/core'
 import { IconBrandInstagram, IconMail, IconShoppingBag } from '@tabler/icons-react'
 import { CharmCollectionHero } from './CharmCollectionHero'
+import { OkayCharmsStrip } from './OkayCharmsStrip'
 import './App.css'
 
 function App() {
@@ -84,6 +85,8 @@ function App() {
       </header>
 
       <CharmCollectionHero />
+
+      <OkayCharmsStrip />
 
       <Container size="lg" className="mainContent">
         <section className="colorBanner">

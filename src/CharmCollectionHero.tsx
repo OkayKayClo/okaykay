@@ -1,8 +1,8 @@
 import classes from './CharmCollectionHero.module.css'
 
 /**
- * Full-bleed campaign hero — artwork at /hero-charm-collection.png
- * already includes all headline and product visuals; no duplicate live text.
+ * Full-bleed campaign hero — all typography and product art live in the image.
+ * No live headline, logo, or body copy in HTML (screen-reader title only).
  */
 export function CharmCollectionHero() {
   return (
@@ -12,17 +12,21 @@ export function CharmCollectionHero() {
       </h1>
 
       <div className={classes.imageWrap}>
-        <img
-          src="/hero-charm-collection.png"
-          alt="Okay Kay Charm Bag Collection — handbags, gold charms, and collection details"
-          className={classes.heroImage}
-          decoding="async"
-          fetchPriority="high"
-        />
+        <picture>
+          <source
+            media="(max-width: 900px)"
+            srcSet="/hero-charm-collection-mobile.png"
+            type="image/png"
+          />
+          <img
+            src="/hero-charm-collection.png"
+            alt="Okay Kay Charm Bag Collection — full campaign artwork"
+            className={classes.heroImage}
+            decoding="async"
+            fetchPriority="high"
+          />
+        </picture>
       </div>
-
-      {/* Eases the transition into the rest of the page without covering the art */}
-      <div className={classes.bottomFade} aria-hidden="true" />
     </section>
   )
 }

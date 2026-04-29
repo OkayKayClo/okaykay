@@ -20,7 +20,6 @@
   align-items: center;
 }
 
-.heroTitle,
 .bannerTitle,
 .lookTitle,
 .emailTitle,
@@ -54,105 +53,11 @@
   padding-bottom: 0;
 }
 
-/* Full-width hero: left column matches main content inset; image is full-bleed to the right */
-.heroFull {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
-  width: 100%;
-  min-height: clamp(520px, 78vh, 900px);
-  background: #f6f4f0;
-}
-
-.heroColLeft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: clamp(2rem, 4vw, 3.5rem) 1.5rem;
-  padding-left: max(1.5rem, calc((100vw - 1120px) / 2 + 1rem));
-  max-width: 720px;
-}
-
-.heroImageCol {
-  grid-column: 2;
-  grid-row: 1;
-  position: relative;
-  min-height: clamp(480px, 78vh, 900px);
-}
-
-.heroImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 58% center;
-}
-
-.heroTitle {
-  font-size: clamp(2.5rem, 5.2vw, 4.8rem);
-  line-height: 0.95;
-}
-
-.heroTitleDot {
-  color: #ff8a2a;
-}
-
-.heroSub {
-  max-width: 36ch;
-  font-size: clamp(1rem, 1.4vw, 1.18rem);
-}
-
-.heroAvatars {
-  display: flex;
-  align-items: center;
-  padding-left: 2px;
-}
-
-.heroAvatars img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #f6f4f0;
-  margin-left: -10px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
-}
-
-.heroAvatars img:first-child {
-  margin-left: 0;
-}
-
-.heroSocialText {
-  line-height: 1.35;
-  max-width: 18rem;
-}
-
-.btnPrimary,
-.btnSecondary,
 .joinButton {
   height: 44px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 12px;
-}
-
-.btnPrimary {
-  background: #111;
-}
-
-.btnPrimary:hover {
-  background: #2537ff;
-}
-
-.btnSecondary {
-  border-color: #111;
-  color: #111;
-}
-
-.btnSecondary:hover {
-  background: #f0ebff;
-  border-color: #7046ff;
 }
 
 .colorBanner {
@@ -259,38 +164,6 @@
   .leftNav,
   .rightNav {
     justify-content: center;
-  }
-
-  .heroFull {
-    grid-template-columns: 1fr;
-    min-height: unset;
-  }
-
-  .heroColLeft {
-    grid-row: 1;
-    order: 1;
-    max-width: 100%;
-    padding: 1.5rem 1.25rem 0.5rem;
-  }
-
-  .heroImageCol {
-    grid-column: 1;
-    grid-row: 2;
-    order: 2;
-    min-height: min(52vh, 420px);
-  }
-
-  .heroColLeft .mantine-Group-root:first-of-type {
-    width: 100%;
-  }
-
-  .heroColLeft .mantine-Button-root {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .heroSocialProof {
-    flex-wrap: wrap;
   }
 
   .lookCard {

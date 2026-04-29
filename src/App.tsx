@@ -13,6 +13,7 @@ import {
   Title,
 } from '@mantine/core'
 import { IconBrandInstagram, IconMail, IconShoppingBag } from '@tabler/icons-react'
+import { CharmCollectionHero } from './CharmCollectionHero'
 import './App.css'
 
 function App() {
@@ -82,59 +83,7 @@ function App() {
         </Container>
       </header>
 
-      <section className="heroFull" aria-label="Hero">
-        <div className="heroColLeft">
-          <Stack gap={20}>
-            <Title order={1} className="heroTitle">
-              Made for the ones who move different
-              <span className="heroTitleDot" aria-hidden="true">
-                .
-              </span>
-            </Title>
-            <Text className="heroSub">
-              Clean silhouettes. Bold presence. Built for everyday statements.
-            </Text>
-          </Stack>
-
-          <Stack gap={16} mt="md">
-            <Group gap={12} wrap="wrap">
-              <Button size="md" radius={0} className="btnPrimary">
-                Join the Drop &rarr;
-              </Button>
-              <Button size="md" radius={0} variant="outline" className="btnSecondary">
-                Explore Looks
-              </Button>
-            </Group>
-            <Group gap={10} className="heroSocialProof" wrap="wrap">
-              <div className="heroAvatars" aria-hidden="true">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=96&h=96&q=60"
-                  alt=""
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=60"
-                  alt=""
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=96&h=96&q=60"
-                  alt=""
-                />
-              </div>
-              <Text size="sm" c="dimmed" className="heroSocialText">
-                Join 3,000+ early supporters from around the world.
-              </Text>
-            </Group>
-          </Stack>
-        </div>
-
-        <div className="heroImageCol">
-          <img
-            src="/hero-main.png"
-            alt="Okay Kay Charm Bag Collection — bags and gold charms, coming soon"
-            className="heroImage"
-          />
-        </div>
-      </section>
+      <CharmCollectionHero />
 
       <Container size="lg" className="mainContent">
         <section className="colorBanner">
